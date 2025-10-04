@@ -637,6 +637,12 @@ State-Odisha
                     </select>
                 </div>
             </div>
+            <div class="menu-group">
+                <button class="menu-button" onclick="toggleMenu(this)">Support Us</button>
+                <div class="menu-content">
+                    <button onclick="supportUs()">Support via UPI</button>
+                </div>
+            </div>
         </div>
     </div>
     <script>
@@ -670,6 +676,10 @@ State-Odisha
             setupSelectionListener();
         };
         request.onerror = () => alert('IndexedDB failed.');
+
+        function supportUs() {
+            window.open('upi://pay?pa=9348692218-3@ibl&pn=ABHAYA%20%20BEHERA&mc=0000&mode=02&purpose=00', '_blank');
+        }
 
         function setupSelectionListener() {
             document.addEventListener('selectionchange', () => {
